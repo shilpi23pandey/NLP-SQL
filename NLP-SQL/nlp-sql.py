@@ -14,7 +14,7 @@ mysql = MySQL(nlpsql)
 
 #database Configuration
 nlpsql.config['MYSQL_DATABASE_USER'] = 'root'
-nlpsql.config['MYSQL_DATABASE_PASSWORD'] = 'active@123'
+nlpsql.config['MYSQL_DATABASE_PASSWORD'] = 'root'
 nlpsql.config['MYSQL_DATABASE_DB'] = 'nlpproj'
 nlpsql.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
