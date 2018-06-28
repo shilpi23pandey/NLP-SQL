@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Admin Portal</h2>
+  <p>You can change the access of the users</p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>Access</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+      <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[2] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="form-group">
+  <form action="/changeAccess" method="POST">
+	  <label for="sel1">Select userid to change the access mode</label>
+	  <select class="form-control" id="changeAccess" name="changeAccess">
+	    {% for row in data %}
+	    <option value="{{ row[0] }}">{{row[0] }}</option>
+	    {% endfor %}
+	  </select>
+	  <select class="form-control" id="accessMode" name="accessMode">
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	  </select>
+	  <button type="submit" class="btn btn-default">Submit</button>
+   </form>	    
+</div>
+</div>
+
+</body>
+</html>
+

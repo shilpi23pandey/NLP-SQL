@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<link rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	  <!-- or -->
+	  <link rel="stylesheet"
+	  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	
+<style>
+input {
+	color:white;
+}
+</style>	
+
+
+</head>
+  <body>
+    <div id="container">
+    <!--  <div id="logo_bar">
+        <img id="logo" src="https://lh3.googleusercontent.com/-TDrwLA2Z46E/VdnclUW79oI/AAAAAAAACSs/lq2kFXEj3jE/s160-Ic42/logo_icon.png" alt="logo"> <span></span>
+      </div> -->
+      <div id="form_box">
+        <form action="/submitLogin" method="POST">
+          <p id="form_heading">Login Form</p>
+          <input type="text" name="username" placeholder="Enter Email"><br /></br >
+          <input type="password" name="password" placeholder="Enter Password"><br /></br>
+          <span style="color:red;text-align:center;">{{ error }}</span>
+          <input type="submit" value="Login"><br /><br />
+          <a href="signup" ><span style="color:white;">New member? Sign up</span></a>
+          <br/>
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
+

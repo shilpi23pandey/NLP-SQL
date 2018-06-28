@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+	<style>
+		.signupbg-img {
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		  background: url('../static/img/signupBG.jpg') center center no-repeat;
+		  background-size: cover;
+		  
+		  &:before {
+		    content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+			opacity: .6; 
+		  }
+		}
+	</style>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<link rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	  <!-- or -->
+	  <link rel="stylesheet"
+	  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	
+	
+
+
+</head>
+  <body class="text-center">
+   <div class="signupbg-img">
+    <form class="form-signin" action="/requestAuthentication" method="POST">
+      <span style="color:white;"><h1><span class="glyphicon glyphicon-user"></span></h1>
+      <h1 class="h3 mb-3 font-weight-normal">Please Fill in your details</h1></span>
+      <label for="inputName" class="sr-only">Name</label>
+      <input type="text" id="inputName" name="name" class="form-control" placeholder="Name" required>
+      <label for="department" class="sr-only">Department</label>
+      <input type="text" class="form-control" name="department" placeholder="department" required>
+      <label for="userId" class="sr-only">Email address</label>
+      <input type="text" id="userId" class="form-control" name="userId" placeholder="user Id" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+      		<input type="radio" name="desig" value="2" checked> Student &nbsp;&nbsp;&nbsp;
+		<input type="radio" name="desig" value="1"> Teacher<br><br />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Request Authentication</button>          
+        </label>
+      </div>
+      <p class="mt-5 mb-3 text-muted">&copy; NL-SQL</p>
+    </form>
+   </div>
+  </body>
+
+</html>
+
