@@ -1,4 +1,3 @@
-python
 flask
 nltk==3.3
 flask-mysql
