@@ -1,4 +1,4 @@
-#Create database 
+#Create databa
 #create database nlpproj
 
 #Use database
@@ -23,4 +23,12 @@ CREATE TABLE department (
  dId INTEGER PRIMARY KEY,
  name VARCHAR(30),
  buildingCode INTEGER
+);
+
+#Create users table
+CREATE TABLES users )
+	userid  VARCHAR(30) PRIMARY KEY
+	password VARCHAR(30)
+	access INTEGER
+	name VARCHAR(30)
 );
