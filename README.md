@@ -5,7 +5,7 @@ The system gives accurate results for certain class of queries including relatio
 Quick Setup
 
 1. Create and activate virtual Environment :
-   $ vitualenv nlpSql 
+   $ virtualenv nlpSql 
    
    $ source nlpSql/bin/activate
  
